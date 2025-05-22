@@ -238,6 +238,7 @@ const Start = () => {
                   e.preventDefault()
                   if (Pickup.trim() !== "") {
                     const response = await axios.get(`http://localhost:3000/maps/suggestion?address=${Pickup}`)
+                    new Promise(resolve => setTimeout(() =>{} ), 1000);
                     setSuggestions(response.data.data)
                   }
                 }
@@ -257,6 +258,7 @@ const Start = () => {
                   e.preventDefault()
                   if (Destination.trim() !== "") {
                     const response = await axios.get(`http://localhost:3000/maps/suggestion?address=${Destination}`)
+                    new Promise(resolve => setTimeout(() =>{} ), 1000);
                     setSuggestions(response.data.data)
                   }
                 }
